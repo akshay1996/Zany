@@ -17,7 +17,7 @@
 }
 #loginform{
   width:40%;
-  float: center;
+  align:center;
   color: white;
 }
 footer{
@@ -26,6 +26,13 @@ footer{
   bottom: 0;
   position: fixed;
   color:white;
+  width:100%;
+  background: grey;
+  margin-left: -8;
+  height:60;
+}
+footer p{
+  font-size: 20px;
 }
 body{
   background:linear-gradient(180deg, #00c4cc 10%, #6e4593 85%);
