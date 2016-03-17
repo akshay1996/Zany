@@ -1,0 +1,35 @@
+@font-face {
+    font-family: candy;
+    src: url(candy.ttf);
+}
+
+#loginhead{
+  text-align:center;
+  font-style: oblique;
+  font-family:candy;
+  font-size: 100px;
+  color:#001337;
+}
+#login{
+  border-radius: 5px 10px;
+  border:1px;
+
+}
+#loginform{
+  width:40%;
+  float: center;
+  color: white;
+}
+footer{
+  font-size: 10px;
+  text-align: center;
+  bottom: 0;
+  position: fixed;
+  color:white;
+}
+body{
+  background:linear-gradient(180deg, #00c4cc 10%, #6e4593 85%);
+  background-attachment: fixed;
+  height:840px;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
