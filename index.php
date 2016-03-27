@@ -5,28 +5,30 @@ Created on: 15 March 2016
  P.S.Narayanan
  Harikrishnan V
 -->
+<?php ob_start();
+
+          $msg = '';
+
+          if (isset($_POST['login']) && !empty($_POST['username'])
+             && !empty($_POST['password'])) {
+
+             if ($_POST['username'] == 'PSN' &&
+                $_POST['password'] == '123456') {
+                  session_register('username');
+                header('Location: welcome.php');
+             }else {
+                $msg = 'Wrong username or password';
+                echo $msg;
+             }
+          }
+          ob_end_flush();
+       ?>
+<!DOCTYPE HTML>
 <html>
 <head><title>ZanY&trade;-Welcome</title>
 <link rel="stylesheet" href="css/style.css" type="text/css"></head>
 <body>
-  <?php
-            $msg = '';
 
-            if (isset($_POST['login']) && !empty($_POST['username'])
-               && !empty($_POST['password'])) {
-
-               if ($_POST['username'] == 'PSN' &&
-                  $_POST['password'] == '123456') {
-                  $_SESSION['valid'] = true;
-                  $_SESSION['timeout'] = time();
-                  $_SESSION['username'] = 'PSN';
-
-                  echo 'You have entered valid use name and password';
-               }else {
-                  $msg = 'Wrong username or password';
-               }
-            }
-         ?>
   <header>
   <h1 id="loginhead">ZaNy<span style="font-size:20px;">&trade;</span></h1>
 </header>
