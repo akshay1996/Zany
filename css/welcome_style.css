@@ -1,0 +1,9 @@
+header{
+  height:10px;
+  width:auto;
+  background-color: grey;
+}
+header:hover{
+  background-color: blue;
+  transition-duration: 2s;
+}
