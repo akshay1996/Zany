@@ -14,7 +14,7 @@ Created on: 15 March 2016
 
              if ($_POST['username'] == 'PSN' &&
                 $_POST['password'] == '123456') {
-                  session_register('username');
+                  $_SESSION['username']=$_POST['username'];
                 header('Location: welcome.php');
              }else {
                 $msg = 'Wrong username or password';
@@ -32,6 +32,7 @@ Created on: 15 March 2016
   <header>
   <h1 id="loginhead">ZaNy<span style="font-size:20px;">&trade;</span></h1>
 </header>
+<center>
   <div id="loginform" >
 
     <fieldset>
@@ -48,6 +49,7 @@ Created on: 15 March 2016
     </form>
     </fieldset>
   </div>
+</center>
   <footer>
     <p>Copyright&copy; 2016 ZanY&trade; Networks</p>
   </footer>
