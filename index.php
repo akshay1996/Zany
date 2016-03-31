@@ -14,7 +14,7 @@ Created on: 15 March 2016
 
              if ($_POST['username'] == 'PSN' &&
                 $_POST['password'] == '123456') {
-                  $_SESSION['username']=$_POST['username'];
+                  $_SESSION['user']=$_POST['username'];
                 header('Location: welcome.php');
              }else {
                 $msg = 'Wrong username or password';
