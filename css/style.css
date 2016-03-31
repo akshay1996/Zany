@@ -17,26 +17,18 @@
 }
 #loginform{
   width:40%;
-  align:center;
+  float: center;
   color: white;
 }
 footer{
-  font-size: 3px;
+  font-size: 10px;
   text-align: center;
   bottom: 0;
   position: fixed;
   color:white;
-  width:100%;
-  background: grey;
-  margin-left: -8;
-  height:30px;
-}
-footer p{
-  font-size: 20px;
 }
 body{
-  // background:linear-gradient(180deg, #00c4cc 10%, #6e4593 85%);
-  background: linear-gradient(180deg, #48227d 0%, #2f569c 100%);
+  background:linear-gradient(180deg, #00c4cc 10%, #6e4593 85%);
   background-attachment: fixed;
   height:840px;
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
