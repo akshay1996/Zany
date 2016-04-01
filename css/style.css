@@ -32,12 +32,16 @@ footer{
   height:30px;
 }
 footer p{
-  font-size: 20px;
+  font-size: 10px;
 }
 body{
-  // background:linear-gradient(180deg, #00c4cc 10%, #6e4593 85%);
   background: linear-gradient(180deg, #48227d 0%, #2f569c 100%);
   background-attachment: fixed;
   height:840px;
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+#error{
+  color:red;
+  font-size:10px;
+  font-family: cursive;
 }

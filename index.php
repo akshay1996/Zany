@@ -15,17 +15,16 @@ Created on: 15 March 2016
              if ($_POST['username'] == 'PSN' &&
                 $_POST['password'] == '123456') {
                   $_SESSION['user']=$_POST['username'];
-                header('Location: welcome.php');
+                header("location: welcome.php");
              }else {
                 $msg = 'Wrong username or password';
-                echo $msg;
              }
           }
           ob_end_flush();
        ?>
 <!DOCTYPE HTML>
 <html>
-<head><title>ZanY&trade;-Welcome</title>
+<head><title>ZanY&trade; Welcome</title>
 <link rel="stylesheet" href="css/style.css" type="text/css"></head>
 <body>
 
@@ -37,7 +36,6 @@ Created on: 15 March 2016
 
     <fieldset>
       <legend><em>Login Form</em></legend>
-      <h4 class = "error-message"><?php echo $msg; ?></h4>
       <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);
             ?>" method="post" id="login">
 
@@ -46,6 +44,7 @@ Created on: 15 March 2016
       <input type="password" name="password" placeholder="Password">
       <br>
       <input type="submit" name="login" value="Submit">
+      <h4 id= "error"><?php echo $msg; ?></h4>
     </form>
     </fieldset>
   </div>
