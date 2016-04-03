@@ -9,7 +9,7 @@ header('Location: index.php');
 <html>
 <body>
   <header>
-    <a href=#user><?php echo $_SESSION['user']; ?></a>
+    <a href=#user><?php echo "Hello, ". $_SESSION['user']; ?></a>
   </header>
 
 </body>
