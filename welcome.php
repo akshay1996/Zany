@@ -1,19 +1,16 @@
 <?php
-session_start();
-if(!isset($_SESSION['user']) )
-{
-header('Location: index.php');
-}
+include('includes/session.php');
 ?>
 
 <html>
 <head>
-  <title><?php echo $_SESSION['user']."Home"; ?></title>
+  <title><?php echo "Home"; ?></title>
   <link rel="stylesheet" href="css/welcome_style.css" type="text/css">
 </head>
 <body>
   <header>
-    <a href=#user><?php echo "Hello, ". $_SESSION['user']; ?></a>
+    <a href=#user><?php echo "Hello, "; ?></a>
+    <a href="/logout.php">Logout</a>
   </header>
 
 </body>
