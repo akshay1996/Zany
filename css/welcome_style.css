@@ -1,9 +1,41 @@
-header{
-  height:10px;
-  width:auto;
-  background-color: grey;
+#userwel{
+  float:left;
 }
-header:hover{
-  background-color: blue;
-  transition-duration: 2s;
+#logout{
+float:right;
+}
+#logo{
+
+}
+ul {
+  position: fixed;
+  border-radius: 25px;
+  height:20px;
+  width:1215px;
+  background-color: grey;
+  padding: 20px;
+    top: 0;
+    list-style-type: none;
+    margin: 0;
+    overflow: hidden;
+}
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 0px 16px;
+    text-decoration: none;
+    font-style: italic;
+    border-radius: 25px;
+
+}
+
+a:hover:not(.active) {
+    background-color: #111;
+    transition-duration: 2s;
+
+}
+
+.active {
+background-color:#4CAF50;
 }
