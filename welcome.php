@@ -8,6 +8,9 @@ header('Location: index.php');
 
 <html>
 <body>
-Login Successful
+  <header>
+    <a href=#user><?php echo $_SESSION['user']; ?></a>
+  </header>
+
 </body>
 </html>
