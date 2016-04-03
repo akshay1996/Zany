@@ -1,27 +1,21 @@
-<!-- ZANY Official Social Networking Website Source Code
-Created on: 15 March 2016
----------------------Developers----------------------
- Sooraj Soman
- P.S.Narayanan
- Harikrishnan V
--->
 <?php ob_start();
-
+          session_start();
+      //    error_reporting(E_ALL);
+        //  ini_set('display_errors', 'On');
           $msg = '';
-
-          if (isset($_POST['login']) && !empty($_POST['username'])
-             && !empty($_POST['password'])) {
-
-             if ($_POST['username'] == 'PSN' &&
-                $_POST['password'] == '123456') {
-                  $_SESSION['user']=$_POST['username'];
-                header("location: welcome.php");
+          if($_SERVER["REQUEST_METHOD"] == "POST") {
+             if ($_POST['username'] == 'PSN' && $_POST['password'] == '123456') {
+                $user=$_POST['username'];
+                $_SESSION['login_user']=$user;
+                $msg= $_SESSION['login_user'];
+                header("Location: welcome.php");
+                exit();
              }else {
                 $msg = 'Wrong username or password';
              }
           }
-          ob_end_flush();
-       ?>
+          ob_flush();?>
+
 <!DOCTYPE HTML>
 <html>
 <head><title>ZanY&trade; Welcome</title>
@@ -31,6 +25,7 @@ Created on: 15 March 2016
   <header>
   <h1 id="loginhead">ZaNy<span style="font-size:20px;">&trade;</span></h1>
 </header>
+
 <center>
   <div id="loginform" >
 
@@ -47,10 +42,11 @@ Created on: 15 March 2016
       <h4 id= "error"><?php echo $msg; ?></h4>
     </form>
     </fieldset>
+
   </div>
 </center>
   <footer>
-    <p>Copyright&copy; 2016 ZanY&trade; Networks</p>
+    <p>Copyright&copy; 2016 ZanY&trade; Networks inc. All rights Reserved.</p>
   </footer>
 </body>
 </html>
