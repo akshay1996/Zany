@@ -11,7 +11,7 @@
   color:#001337;
 }
 #login{
-  border-radius: 5px 10px;
+  border-radius: 25px;
   border:1px;
 
 }
@@ -21,7 +21,7 @@
   color: white;
 }
 footer{
-  font-size: 10px;
+  font-size: 3px;
   text-align: center;
   bottom: 0;
   position: fixed;
@@ -29,14 +29,19 @@ footer{
   width:150%;
   background: grey;
   margin-left: -8;
-  height:60;
+  height:30px;
 }
 footer p{
   font-size: 10px;
 }
 body{
-  background:linear-gradient(180deg, #00c4cc 10%, #6e4593 85%);
+  background: linear-gradient(180deg, #48227d 0%, #2f569c 100%);
   background-attachment: fixed;
   height:840px;
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+#error{
+  color:red;
+  font-size:10px;
+  font-family: cursive;
 }
