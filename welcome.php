@@ -9,12 +9,9 @@ include('includes/session.php');
 </head>
 <body>
   <header>
-    <ul>
-  <li>  <a id="userwel" href=#user><?php echo "Hello, ".$_SESSION['login_user']; ?></a></li>
-<li><a id="logo" href="welcome.php">Test</a></li>
-  <li>  <a id="logout" href="/logout.php">Logout </a></li>
-  </ul>
-  </header>
-
+   <a id="userwel" href=#user><?php echo "Hello, ".$_SESSION['login_user']; ?></a>
+   <a id="logo" href="welcome.php">Test</a>
+   <a id="logout" href="/logout.php">Logout</a>
+ </header>
 </body>
 </html>
