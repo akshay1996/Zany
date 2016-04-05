@@ -30,9 +30,9 @@
   <div id="loginform" >
 
     <fieldset>
-      <legend><em>Login Form</em></legend>
+      <legend><em>Login</em></legend>
       <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);
-            ?>" method="post" id="login">
+            ?>" method="post">
 
       <input type="text" name="username" placeholder="Username">
       <br>
