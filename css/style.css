@@ -2,7 +2,10 @@
     font-family: candy;
     src: url(../fonts/candy.ttf);
 }
-
+@font-face {
+  font-family: bubbly;
+  src: url(../fonts/bubbly.ttf);
+}
 #loginhead{
   text-align:center;
   font-style: oblique;
@@ -32,13 +35,14 @@ footer{
   height:30px;
 }
 footer p{
+  font-family:bubbly;
   font-size: 10px;
 }
 body{
   background: linear-gradient(180deg, #48227d 0%, #2f569c 100%);
   background-attachment: fixed;
   height:840px;
-  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  font-family:bubbly;
 }
 #error{
   color:red;
