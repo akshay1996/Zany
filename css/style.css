@@ -10,10 +10,9 @@
   font-size: 100px;
   color:#001337;
 }
-#login{
-  border-radius: 25px;
-  border:1px;
-
+fieldset{
+	  border-radius: 25px;
+	  background-color:red;
 }
 #loginform{
   width:40%;
@@ -26,9 +25,9 @@ footer{
   bottom: 0;
   position: fixed;
   color:white;
-  width:150%;
-  background: grey;
-  margin-left: -8;
+  width:100%;
+  background:red;
+  margin-left: -7px;
   height:30px;
 }
 footer p{
