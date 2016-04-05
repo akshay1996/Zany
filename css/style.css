@@ -13,11 +13,10 @@
   font-size: 100px;
   color:#001337;
 }
-fieldset{
-	  border-radius: 25px;
-	  background-color:red;
-}
 #loginform{
+  border: solid grey;
+  border-radius: 25px;
+  background-color:red;
   width:40%;
   align:center;
   color: white;
@@ -44,7 +43,11 @@ body{
   font-family:bubbly;
 }
 #error{
-  color:red;
+  border:solid blue;
+  background-color: green;
+  border-radius: 10px;
+
+  color:grey;
   font-size:10px;
   font-family: cursive;
 }
