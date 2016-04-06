@@ -2,11 +2,15 @@
     font-family: candy;
     src: url(../fonts/candy.ttf);
 }
+@-webkit-keyframes mymove {
+    20% {font-size: 40px;}
+}
 @font-face {
   font-family: bubbly;
   src: url(../fonts/bubbly.ttf);
 }
 #loginhead{
+   -webkit-animation: mymove 3s 1;
   text-align:center;
   font-style: oblique;
   font-family:candy;
@@ -46,8 +50,7 @@ body{
   border:solid blue;
   background-color: green;
   border-radius: 10px;
-
-  color:grey;
+  color:white;
   font-size:10px;
-  font-family: cursive;
+  font-family: bubbly;
 }

@@ -7,12 +7,24 @@ float:right;
 #logo{
   margin-left: 40%;
 }
-header{
+body{
+    background: linear-gradient(180deg, #48227d 0%, #2f569c 100%);
+    background-attachment: fixed;
+    height:840px;
+    font-family:bubbly;
 
+}
+#navbar{
+ margin-top: -0.5%;
+ border: 1px solid grey;
+ border-radius: 5px;
+ height: 40px;
+ padding-top: 15px;
+ background-color: black;
 }
 header a {
     display:inline;
-    color: grey;
+    color: white;
     text-align: center;
     padding: 0px 16px;
     text-decoration: none;
