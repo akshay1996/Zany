@@ -4,7 +4,8 @@ include('includes/mysql_connection.php');
          error_reporting(E_ALL|E_STRICT);
          ini_set('display_errors',true);
           $msg = '';
-          if(($_SERVER["REQUEST_METHOD"] == "POST") && (isset($_POST['login']))){
+          if($_SERVER["REQUEST_METHOD"] == "POST"){
+          if(isset($_POST['login'])){
                $user=$_POST['username'];
                $pass=$_POST['password'];
                if(!empty($user) && !empty($pass)){
@@ -32,7 +33,7 @@ include('includes/mysql_connection.php');
          $user=$_POST['username'];
          $pass=$_POST['password'];
          if(!empty($user) && !empty($pass)){
-           $sql="INSERT INTO mysql.Registration_Zany VALUES('".$user."','".$pass."')";
+           $sql="INSERT INTO mysql.Registration_Zany ('ID','name','pass') VALUES ('10','".$user."','".$pass."')";
            $msg='Succesfully Registered!';
 
          }
@@ -40,6 +41,7 @@ include('includes/mysql_connection.php');
            $msg='Please enter all fields!';
                   }
        }
+     }
 ob_flush(); ?>
 
 <!DOCTYPE HTML>
@@ -65,7 +67,7 @@ ob_flush(); ?>
   </div>
 </center>
   <footer>
-    <p>Copyright&copy; 2016 ZanY&trade; Networks inc. All rights Reserved.</p>
+    <p>Copyright&copy; 2016 ZanY&trade; Networks inc. All rights Reserved.&nbsp;&nbsp;&nbsp;<em>Hand-made with Love.</em></p>
   </footer>
 </body>
 </html>
