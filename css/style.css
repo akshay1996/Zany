@@ -2,28 +2,16 @@
     font-family: candy;
     src: url(../fonts/candy.ttf);
 }
-@-webkit-keyframes mymove {
-    20% {font-size: 40px;}
-}
 @font-face {
   font-family: bubbly;
   src: url(../fonts/bubbly.ttf);
 }
 #loginhead{
-   -webkit-animation: mymove 3s 1;
   text-align:center;
   font-style: oblique;
   font-family:candy;
   font-size: 100px;
   color:#001337;
-}
-#loginform{
-  border: solid grey;
-  border-radius: 25px;
-  background-color:red;
-  width:40%;
-  align:center;
-  color: white;
 }
 footer{
   font-size: 3px;

@@ -1,3 +1,7 @@
+@font-face {
+  font-family: bubbly;
+  src: url(../fonts/bubbly.ttf);
+}
 #userwel{
   float:left;
 }
@@ -7,6 +11,9 @@ float:right;
 #logo{
   margin-left: 40%;
 }
+#msg{
+  float:right;
+}
 body{
     background: linear-gradient(180deg, #48227d 0%, #2f569c 100%);
     background-attachment: fixed;
@@ -15,6 +22,9 @@ body{
 }
 textarea {
     resize: none;
+}
+#Post_Btn{
+  font-family: bubbly;
 }
 #Profile_Head{
   width:99.6%;
@@ -33,7 +43,7 @@ textarea {
  margin-top: -0.5%;
  border: 1px solid grey;
  border-radius: 5px;
- height: 40px;
+ height: 60px;
  padding-top: 15px;
  background-color: black;
 }
@@ -47,13 +57,6 @@ header a {
     border-radius: 25px;
 
 }
+#Main_Content{
 
-a:hover:not(.active) {
-    background-color: hotpink;
-    transition-duration: 2s;
-
-}
-
-.active {
-background-color:#4CAF50;
 }
