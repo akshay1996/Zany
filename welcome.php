@@ -19,7 +19,8 @@ include('includes/session.php');
   <header>
     <div id="navbar">
    <a id="userwel" href=#user><?php echo "Hello, ".$_SESSION['login_user']; ?></a>
-   <a id="logo" href="welcome.php">Test</a>
+      <a class="navbar-brand" id="logo" href="welcome.php">
+        <img alt="Brand" src="/images/logo.png"></img></a>
    <a id="logout" href="/logout.php">Logout</a>
   <a id="msg" href="#"> <button class="btn btn-primary" type="button">
   Messages <span class="badge">4</span>
