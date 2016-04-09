@@ -12,7 +12,14 @@ body{
     background-attachment: fixed;
     height:840px;
     font-family:bubbly;
-
+}
+textarea {
+    resize: none;
+}
+#Profile_Head{
+  width:99.6%;
+  height:30%;
+  border: 2px solid red;
 }
 #sidebar{
   margin-left: 0;
