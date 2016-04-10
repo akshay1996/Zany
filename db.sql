@@ -1,0 +1,7 @@
+CREATE TABLE `Registration_Zany` (
+  `id` int(11) PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  `name` varchar(240) NOT NULL,
+  `email` varchar(240) NOT NULL,
+  `password` varchar(240) NOT NULL,
+  `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
