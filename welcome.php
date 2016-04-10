@@ -1,10 +1,20 @@
 <?php
 include('includes/session.php');
+include('includes/mysql_connection.php');
+$msg="TEST";
+$post_update="";
+if(isset($_POST['action'])){
+if($_POST['action']=="status"){
+$msg=$_POST['status'];
+$post_update="".$_SESSION['login_user']." posted an update <span class='glyphicon glyphicon-bullhorn'></span> <br><h3>".$msg."</h3>";
+
+}
+}
 ?>
 <!DOCTYPE html>
 <html>
 <head>
-  <title><?php echo "Home"; ?></title>
+  <title><?php echo "Home - ".$_SESSION['login_user']; ?></title>
   <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 
@@ -18,7 +28,7 @@ include('includes/session.php');
 <body>
   <header>
     <div id="navbar">
-   <a id="userwel" href=#user><?php echo "Hello, ".$_SESSION['login_user']; ?></a>
+   <a id="userwel" href=#user><img id="#dp"><?php echo "Hello, ".$_SESSION['login_user']; ?></a>
       <a id="logo" href="welcome.php">
         <img alt="Brand" src="/images/logo.png"></img></a>
 
@@ -43,19 +53,22 @@ Messages <span class="badge">4</span>
  </div>
  <div id="sidebar">
  </div>
+ <center>
+   <br>
  <div id="Main_Content">
- <form method="post" action="">
-   <textarea cols="80" rows="5" id="Post-Txt" placeholder="Post Status Updates..." autofocus="true">
+ <form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>">
+   <textarea cols="100" rows="8" name="status" id="Post-Txt" placeholder="Post Status Updates...">
    </textarea>
    <br>
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   <input name="action" type="hidden" value="status" >
    <input type="submit" class="btn btn-info" value="Post Status">
  </form>
  </div>
+ <br>
+ <hr>
+ <div class="Feeds">
+ <?php echo $post_update; ?>
+ </div>
+ </center>
 </body>
 </html>
