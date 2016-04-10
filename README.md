@@ -1,4 +1,4 @@
-# Zany
+# ZanY Networks
 Open Source Social Network Site
 
 ##How to contribute?
