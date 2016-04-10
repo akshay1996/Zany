@@ -1,4 +1,5 @@
-<?
-mysql_connect("mysql.hostinger.in","u112826196_zany","Narayanan123") or die(mysql_error());
-mysql_select_db("u112826196_zany");
+<?php
+global $con;
+$con=mysqli_connect("localhost:8889","root","root") or die(mysql_error());
+mysqli_select_db($con,"Registration_Zany");
 ?>

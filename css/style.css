@@ -13,15 +13,6 @@
   font-size: 100px;
   color:#001337;
 }
-fieldset{
-	  border-radius: 25px;
-	  background-color:red;
-}
-#loginform{
-  width:40%;
-  align:center;
-  color: white;
-}
 footer{
   font-size: 3px;
   text-align: center;
@@ -44,7 +35,10 @@ body{
   font-family:bubbly;
 }
 #error{
-  color:red;
+  border:solid blue;
+  background-color: green;
+  border-radius: 10px;
+  color:white;
   font-size:10px;
-  font-family: cursive;
+  font-family: bubbly;
 }
