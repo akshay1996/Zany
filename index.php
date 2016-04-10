@@ -4,16 +4,16 @@ include('includes/mysql_connection.php');
          error_reporting(E_ALL|E_STRICT);
          ini_set('display_errors',true);
           $msg = '';
-          if($_SERVER["REQUEST_METHOD"] == "POST"){
-          if(isset($_POST['login'])){
+          if(isset($_POST['action'])){
+          if($_POST['action']=="login"){
                $user=$_POST['username'];
                $pass=$_POST['password'];
                if(!empty($user) && !empty($pass)){
-                $sql="SELECT pass from mysql.Registration_Zany where name ='".$user."'";
+                $sql="SELECT password from mysql.Registration_Zany where name ='".$user."'";
                 $res=mysqli_query($con,$sql);
                 if(mysqli_num_rows($res)>0){
                   $row=mysqli_fetch_assoc($res);
-                  if($row["pass"]==$pass){
+                  if($row["password"]==$pass){
                    $_SESSION['login_user']=$user;
                    $msg= $_SESSION['login_user'];
                    header("Location: welcome.php");
@@ -32,13 +32,18 @@ include('includes/mysql_connection.php');
      </div>';
                }
        }
-       elseif(isset($_POST['registration'])){
-         echo "Debug_module_Active";
-         $user=$_POST['username'];
-         $pass=$_POST['password'];
+       elseif($_POST['action']=="register"){
+         $user=$_POST['rusername'];
+         $pass=$_POST['rpassword'];
+         $email=$_POST['remail'];
+         echo $user;
+         echo $pass;
+         echo $email;
          if(!empty($user) && !empty($pass)){
-           $sql="INSERT INTO mysql.Registration_Zany ('ID','name','pass') VALUES ('10','".$user."','".$pass."')";
-           $msg='Succesfully Registered!';
+           $sql="INSERT INTO mysql.Registration_Zany ('name','email','password') VALUES (".$user."','".$email."','".$pass."')";
+           mysqli_query($con,$sql);
+           $msg='<div class="alert alert-success">
+  <strong>Success</strong> Succesfully Registered!</div>';
 
          }
          else{
@@ -77,7 +82,7 @@ ob_flush(); ?>
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
 
-        <div class="container">
+  <div class="container">
   <h2>Login to ZanY</h2>
   <p>The test form</p>
   <form role="form" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method="post">
@@ -88,53 +93,77 @@ ob_flush(); ?>
     <div class="form-group">
       <label for="pwd">Password:</label>
       <input type="password" name="password" class="form-control" id="pwd">
-      <input type="submit" name="login" value="Login">
+       <input name="action" type="hidden" value="login" >
+      <input type="submit" name="login-btn" value="Login">
    <?php echo $msg; ?>
+   </div>
 </form>
-    </div>
-  </form>
+
 </div>
-      </div>
-    </div>
-  </div>
+</div>
+</div>
 </div>
 <div class="modal fade bs-example-modal-lg1" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
-      <div id="Regform" >
-        TEST
-      </div>
-    </div>
-  </div>
-</div>
-</p>
-</div>
-</center>
 
-<!--  -->
-<center>
-<a class="btn btn-success  btn-lg" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-  Test 1
-</a>
-&nbsp;&nbsp;&nbsp;&nbsp;
-<button class="btn btn-success  btn-lg" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-Test 2
-</button>
-<div class="collapse" id="collapseExample">
-  <div class="well">
-    <div class="row">
-    <div class="col-xs-6 col-md-6">
-      <div class="github-widget" data-repo="PSNAppz/Zany"></div>
-      <script type="text/javascript" src="jquery.githubRepoWidget.min.js"></script>
-    </div>
-    ...
-  </div>
-  </div>
+
+
+      <div class="container">
+        <h2 style="text-align:center;">Registration form</h2>
+
+
+
+        <form class="form-horizontal" role="form" method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" >
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="fn">First Name:</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" name="rusername" id="fn" placeholder="Enter First Name">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="ln">Last Name:</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="ln" placeholder="Enter Last Name">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="email">Email:</label>
+            <div class="col-sm-10">
+              <input type="email" class="form-control" name="remail" id="email" placeholder="Enter email">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="pwd">Password:</label>
+            <div class="col-sm-10">
+              <input type="password" class="form-control" name="rpassword" id="pwd" placeholder="Enter password">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="cp">Confirm Password:</label>
+            <div class="col-sm-10">
+              <input type="password" class="form-control" id="cp" placeholder="Confirm password">
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+               <input name="action" type="hidden" value="register" >
+              <input type="submit" name="registration-btn" value="Register" class="btn btn-default">
+            </div>
+               <?php echo $msg; ?>
+          </div>
+        </form>
+      </div>
+</form>
+</div>
+</div>
+</div>
 </div>
 </center>
-<div class="github-widget" data-repo="PSNAppz/Zany"></div>
-<script type="text/javascript" src="jquery.githubRepoWidget.min.js"></script>
-</div>
   <footer>
     <p>Copyright&copy; 2016 ZanY&trade; Networks inc. All rights Reserved.&nbsp;&nbsp;&nbsp;<em>Hand-made with Love.</em></p>
   </footer>
