@@ -19,20 +19,25 @@ include('includes/session.php');
   <header>
     <div id="navbar">
    <a id="userwel" href=#user><?php echo "Hello, ".$_SESSION['login_user']; ?></a>
-      <a class="navbar-brand" id="logo" href="welcome.php">
+      <a id="logo" href="welcome.php">
         <img alt="Brand" src="/images/logo.png"></img></a>
+
+        <form class="navbar-form navbar-left" role="search" id="Search_Bar">
+  <div class="form-group" >
+    <input type="text" class="form-control" placeholder="Search">
+  </div>
+  <button type="submit" class="btn btn-small">Submit</button>
+</form>
    <a id="logout" href="/logout.php">Logout</a>
-  <a id="msg" href="#"> <button class="btn btn-primary" type="button">
-  Messages <span class="badge">4</span>
-</button></a>
-<a id="msg" href="#"> <button class="btn btn-primary" type="button">
-Messages <span class="badge">4</span>
+  <a id="msg" href="#"> <button class="btn btn-warning" type="button">
+Notifications <span class="badge">14</span>
 </button></a>
 <a id="msg" href="#"> <button class="btn btn-primary" type="button">
 Messages <span class="badge">4</span>
 </button></a>
  </div>
  </header>
+
  <div id="Profile_Head">
    This area is for Uploading profile pic and time line.
  </div>
@@ -40,7 +45,7 @@ Messages <span class="badge">4</span>
  </div>
  <div id="Main_Content">
  <form method="post" action="">
-   <textarea cols="80" rows="5">
+   <textarea cols="80" rows="5" id="Post-Txt" placeholder="Post Status Updates..." autofocus="true">
    </textarea>
    <br>
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

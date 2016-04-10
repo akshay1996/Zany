@@ -123,16 +123,18 @@ Test 2
 <div class="collapse" id="collapseExample">
   <div class="well">
     <div class="row">
-    <div class="col-xs-6 col-md-3">
-      <a href="#" class="thumbnail">
-        <img src="..." alt="...">
-      </a>
+    <div class="col-xs-6 col-md-6">
+      <div class="github-widget" data-repo="PSNAppz/Zany"></div>
+      <script type="text/javascript" src="jquery.githubRepoWidget.min.js"></script>
     </div>
     ...
   </div>
   </div>
 </div>
 </center>
+<div class="github-widget" data-repo="PSNAppz/Zany"></div>
+<script type="text/javascript" src="jquery.githubRepoWidget.min.js"></script>
+</div>
   <footer>
     <p>Copyright&copy; 2016 ZanY&trade; Networks inc. All rights Reserved.&nbsp;&nbsp;&nbsp;<em>Hand-made with Love.</em></p>
   </footer>

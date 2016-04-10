@@ -9,10 +9,14 @@
 float:right;
 }
 #logo{
-  margin-left: 40%;
+  margin-left: 25%;
+  display: inline;
 }
 #msg{
   float:right;
+}
+#Search_Bar{
+
 }
 body{
     background: linear-gradient(180deg, #48227d 0%, #2f569c 100%);
@@ -20,8 +24,10 @@ body{
     height:840px;
     font-family:bubbly;
 }
-textarea {
+#Post-Txt {
     resize: none;
+    ont-size: 15px;
+font-weight: bold;
 }
 #Post_Btn{
   font-family: bubbly;
