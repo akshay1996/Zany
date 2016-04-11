@@ -63,6 +63,7 @@ header a {
     border-radius: 25px;
 
 }
-#Main_Content{
-
+.Feeds{
+  color:white;
+  border: 1px solid grey;
 }
