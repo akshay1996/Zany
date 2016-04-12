@@ -73,7 +73,7 @@ ob_flush(); ?>
   <h1 id="loginhead">ZaNy<span style="font-size:20px;">&trade;</span></h1>
 </header>
 <center>
-  <div class="jumbotron">
+  <div class="jumbotron" id="jumbro">
   <h1>Welcome to Zany&trade; Networks</h1>
   <p>Please Login or Register</p>
   <p><button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Login</button>
