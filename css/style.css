@@ -12,7 +12,10 @@
   font-family:candy;
   font-size: 100px;
   color:#001337;
+  opacity: 0.95;
+
 }
+
 footer{
   font-size: 3px;
   text-align: center;
@@ -28,8 +31,13 @@ footer p{
   font-family:bubbly;
   font-size: 10px;
 }
+#jumbro{
+  opacity: 0.9;
+}
 body{
-  background: linear-gradient(180deg, #48227d 0%, #2f569c 100%);
+  opacity: 0.9;
+  background-image: url("../images/bg.jpg");
+//background: linear-gradient(180deg, #48227d 0%, #2f569c 100%);
   background-attachment: fixed;
   height:840px;
   font-family:bubbly;
