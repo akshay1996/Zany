@@ -6,8 +6,8 @@ include('includes/mysql_connection.php');
           $msg = '';
           if(isset($_POST['action'])){
           if($_POST['action']=="login"){
-               $user=$_POST['username'];
-               $pass=$_POST['password'];
+               $user=secure_input($_POST['username']);
+               $pass=secure_input($_POST['password']);
                if(!empty($user) && !empty($pass)){
                 $sql="SELECT password from mysql.Registration_Zany where name ='".$user."'";
                 $res=mysqli_query($con,$sql);
@@ -33,9 +33,9 @@ include('includes/mysql_connection.php');
                }
        }
        elseif($_POST['action']=="register"){
-         $user=$_POST['rusername'];
-         $pass=$_POST['rpassword'];
-         $email=$_POST['remail'];
+         $user=secure_input($_POST['rusername']);
+         $pass=secure_input($_POST['rpassword']);
+         $email=secure_input($_POST['remail']);
          echo $user;
          echo $pass;
          echo $email;
@@ -52,7 +52,14 @@ include('includes/mysql_connection.php');
 </div>';
                   }
        }
+
      }
+     function secure_input($data) {
+ $data = trim($data);
+ $data = stripslashes($data);
+ $data = htmlspecialchars($data);
+ return $data;
+}
 ob_flush(); ?>
 
 <!DOCTYPE HTML>
@@ -72,12 +79,15 @@ ob_flush(); ?>
   <header>
   <h1 id="loginhead">ZaNy<span style="font-size:20px;">&trade;</span></h1>
 </header>
+<br>
+<br><br>
+<br>
 <center>
   <div class="jumbotron" id="jumbro">
   <h1>Welcome to Zany&trade; Networks</h1>
   <p>Please Login or Register</p>
-  <p><button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Login</button>
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg1">Register</button>
+  <p><button type="button" class="btn btn-danger" data-toggle="modal" data-target=".bs-example-modal-lg">Login</button>
+<button type="button" class="btn btn-danger" data-toggle="modal" data-target=".bs-example-modal-lg1">Register</button>
 <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">

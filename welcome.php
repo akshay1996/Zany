@@ -6,7 +6,7 @@ $post_update="";
 if(isset($_POST['action'])){
 if($_POST['action']=="status"){
 $msg=$_POST['status'];
-$post_update="".$_SESSION['login_user']." posted an update <span class='glyphicon glyphicon-bullhorn'></span> <br><h3>".$msg."</h3>";
+$post_update="<span class='whoposted'>".$_SESSION['login_user']." posted an update <span class='glyphicon glyphicon-bullhorn'></span> </span><br><h3>".$msg."</h3>";
 
 }
 }
@@ -28,14 +28,10 @@ $post_update="".$_SESSION['login_user']." posted an update <span class='glyphico
 <body>
   <header>
     <div id="navbar">
-   <a id="userwel" href=#user><img id="#dp"><?php echo "Hello, ".$_SESSION['login_user']; ?></a>
-      <a id="logo" href="welcome.php">
-        <img alt="Brand" src="/images/logo.png"></img></a>
-
+   <a id="userwel" href=#user><img id="#dp"class="glyphicon glyphicon-user"><?php echo "Hello, ".$_SESSION['login_user']; ?></a>
+      <a id="logo" href="welcome.php">Zany<!--<img alt="Brand" id="logobrand" src="/images/logo.png">--></img></a>
         <form class="navbar-form navbar-left" role="search" id="Search_Bar">
-  <div class="form-group" >
     <input type="text" class="form-control" placeholder="Search">
-  </div>
   <button type="submit" class="btn btn-small">Submit</button>
 </form>
    <a id="logout" href="/logout.php">Logout</a>
@@ -49,6 +45,7 @@ Messages <span class="badge">4</span>
  </header>
 
  <div id="Profile_Head">
+   <button>Upload Pic</button>
    This area is for Uploading profile pic and time line.
  </div>
  <div id="sidebar">
