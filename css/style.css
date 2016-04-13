@@ -29,15 +29,18 @@ footer{
 }
 footer p{
   font-family:bubbly;
+  color:#001337;
   font-size: 10px;
+  padding-top: 10px;
 }
 #jumbro{
-  opacity: 0.9;
+  color:#001337;
 }
+
 body{
   opacity: 0.9;
-  background-image: url("../images/bg.jpg");
-//background: linear-gradient(180deg, #48227d 0%, #2f569c 100%);
+//  background-image: url("../images/bg.jpg");
+  background: linear-gradient(0deg, #EB3349 10%, #F45C43 90%);
   background-attachment: fixed;
   height:840px;
   font-family:bubbly;

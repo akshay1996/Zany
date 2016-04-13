@@ -18,8 +18,12 @@ float:right;
 #Search_Bar{
 
 }
+#logobrand{
+  width: 10px;
+  height: 10px;
+}
 body{
-    background: linear-gradient(180deg, #48227d 0%, #2f569c 100%);
+    background: linear-gradient(0deg, #FFFFFF 10%, #ECE9E6 90%);
     background-attachment: fixed;
     height:840px;
     font-family:bubbly;
@@ -42,7 +46,7 @@ font-weight: bold;
   width: 20%;
   height:100%;
   float: left;
-  background-color: white;
+  background-color: #ECE9E6;
   border: solid black;
 }
 #navbar{
@@ -63,7 +67,18 @@ header a {
     border-radius: 25px;
 
 }
+.whoposted{
+color:white;
+font-family: cursive;
+float:left;
+}
 .Feeds{
-  color:white;
+  padding: 30px;
+  color:black;
   border: 1px solid grey;
+  width:50%;
+  height:250px;
+  margin-left: 20%;
+  background-color: #001337;
+
 }
