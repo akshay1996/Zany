@@ -28,18 +28,22 @@ $post_update="<span class='whoposted'>".$_SESSION['login_user']." posted an upda
 <body>
   <header>
     <div id="navbar">
-   <a id="userwel" href=#user><img id="#dp"class="glyphicon glyphicon-user"><?php echo "Hello, ".$_SESSION['login_user']; ?></a>
-      <a id="logo" href="welcome.php">Zany<!--<img alt="Brand" id="logobrand" src="/images/logo.png">--></img></a>
+   <a id="userwel" href=#user><img id="#dp"><?php echo "Hello, ".$_SESSION['login_user']; ?></a>
+      <a id="logo" href="welcome.php"><img alt="Brand" id="logobrand" src="/images/logo.png"></img></a>
         <form class="navbar-form navbar-left" role="search" id="Search_Bar">
     <input type="text" class="form-control" placeholder="Search">
   <button type="submit" class="btn btn-small">Submit</button>
 </form>
    <a id="logout" href="/logout.php">Logout</a>
+
   <a id="msg" href="#"> <button class="btn btn-warning" type="button">
 Notifications <span class="badge">14</span>
 </button></a>
 <a id="msg" href="#"> <button class="btn btn-primary" type="button">
 Messages <span class="badge">4</span>
+</button></a>
+<a id="msg" href="#"> <button class="btn btn-warning" type="button">
+Friends<span class="glyphicon glyphicon-user">24</span>
 </button></a>
  </div>
  </header>

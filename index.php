@@ -36,12 +36,15 @@ include('includes/mysql_connection.php');
          $user=secure_input($_POST['rusername']);
          $pass=secure_input($_POST['rpassword']);
          $email=secure_input($_POST['remail']);
-         echo $user;
-         echo $pass;
-         echo $email;
          if(!empty($user) && !empty($pass)){
-           $sql="INSERT INTO mysql.Registration_Zany ('name','email','password') VALUES (".$user."','".$email."','".$pass."')";
-           mysqli_query($con,$sql);
+           echo $user;
+           echo $pass;
+           echo $email;
+           $stmt = $con->prepare("INSERT INTO mysql.Registration_Zany ('name','email','password') VALUES (?,?,?)");
+           $stmt->bind_param("sss", $user, $pass, $email);
+           $stmt->execute();
+           $stmt->close();
+           $conn->close();
            $msg='<div class="alert alert-success">
   <strong>Success</strong> Succesfully Registered!</div>';
 
@@ -173,6 +176,10 @@ ob_flush(); ?>
 </div>
 </div>
 </div>
+</center>
+<center>
+<div class="github-card" data-github="PSNAppZ" data-width="400" data-height="" data-theme="default"></div>
+<script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
 </center>
   <footer>
     <p>Copyright&copy; 2016 ZanY&trade; Networks inc. All rights Reserved.&nbsp;&nbsp;&nbsp;<em>Hand-made with Love.</em></p>

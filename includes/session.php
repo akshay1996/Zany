@@ -1,6 +1,6 @@
 <?php
    session_start();
    if(!isset($_SESSION['login_user'])){
-      header("location: welcome.php");
+      echo "You are not logged in";
    }
 ?>
