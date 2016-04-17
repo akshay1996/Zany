@@ -18,8 +18,14 @@ float:right;
 #Search_Bar{
 
 }
+#logobrand{
+  width: 40px;
+  height: 40px;
+}
 body{
-    background: linear-gradient(180deg, #48227d 0%, #2f569c 100%);
+  background-image: url("../images/pro1.png");
+
+    background-color:#131631;
     background-attachment: fixed;
     height:840px;
     font-family:bubbly;
@@ -33,16 +39,18 @@ font-weight: bold;
   font-family: bubbly;
 }
 #Profile_Head{
+  background-image: url("../images/pro.png");
   width:99.6%;
   height:30%;
   border: 2px solid red;
+
 }
 #sidebar{
   margin-left: 0;
   width: 20%;
   height:100%;
   float: left;
-  background-color: white;
+  background-color:#00ccff;
   border: solid black;
 }
 #navbar{
@@ -63,6 +71,21 @@ header a {
     border-radius: 25px;
 
 }
-#Main_Content{
+.whoposted{
+  color:white;
+  font-family: cursive;
+  float:left;
+  font-size: 15px;
+}
 
+.Feeds{
+  background-color:#131631;
+  padding: 30px;
+  color:#00ccff;
+  border: 1px solid grey;
+  width:50%;
+  height:250px;
+  margin-left: 20%;
+  border: 1px solid #00ccff;
+  font-size: 25px;
 }
