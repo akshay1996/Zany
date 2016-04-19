@@ -1,15 +1,7 @@
 <?php
 include('includes/session.php');
 include('includes/mysql_connection.php');
-$msg="";
-$post_update="";
-if(isset($_POST['action'])){
-if($_POST['action']=="status"){
-$msg=$_POST['status'];
-$post_update="<span class='whoposted'>".$_SESSION['login_user']." posted an update <span class='glyphicon glyphicon-bullhorn'></span> </span><br><h3>".$msg."</h3>";
 
-}
-}
 ?>
 <!DOCTYPE html>
 <html>
@@ -56,7 +48,10 @@ Friends<span class="glyphicon glyphicon-user">24</span>
  <div id="sidebar">
    <ul>
      <li>
-    <a href="#"><span class="glyphicon glyphicon-user"> Friends</span></a>
+      <a href="#"> <span class="glyphicon glyphicon-home"> Home</span></a>
+     </li>
+     <li>
+    <a href="../friends.php"><span class="glyphicon glyphicon-user"> Friends</span></a>
      </li>
      <li>
       <a href="#"> <span class="glyphicon glyphicon-envelope"> Messages</span></a>
