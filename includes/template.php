@@ -23,6 +23,7 @@ $post_update="<span class='whoposted'>".$_SESSION['login_user']." posted an upda
 
 <!-- Latest compiled JavaScript -->
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="../js/active.js"></script>
   <link rel="stylesheet" href="css/welcome_style.css" type="text/css">
 </head>
 <body>
@@ -53,6 +54,18 @@ Friends<span class="glyphicon glyphicon-user">24</span>
    This area is for Uploading profile pic and time line.
  </div>
  <div id="sidebar">
+   <ul>
+     <li>
+    <a href="#"><span class="glyphicon glyphicon-user"> Friends</span></a>
+     </li>
+     <li>
+      <a href="#"> <span class="glyphicon glyphicon-envelope"> Messages</span></a>
+     </li>
+     <li>
+      <a href="#"><span class="glyphicon glyphicon-credit-card"> ResetPassword</span></a>
+     </li>
+   </ul>
+
  </div>
 
 </body>
