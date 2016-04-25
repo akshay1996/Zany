@@ -1,5 +1,14 @@
 <?php
 include('includes/template.php');
+$msg="";
+$post_update="";
+if(isset($_POST['action'])){
+if($_POST['action']=="status"){
+$msg=$_POST['status'];
+$post_update="<span class='whoposted'>".$_SESSION['login_user']." posted an update <span class='glyphicon glyphicon-bullhorn'></span> </span><br><h3>".$msg."</h3>";
+
+}
+}
 ?>
 <!DOCTYPE html>
 <html>
