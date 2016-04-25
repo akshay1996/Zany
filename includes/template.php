@@ -23,10 +23,6 @@ include('includes/mysql_connection.php');
     <div id="navbar">
    <a id="userwel" href=#user><img id="#dp"><?php echo "Hello, ".$_SESSION['login_user']; ?></a>
       <a id="logo" href="welcome.php"><img alt="Brand" id="logobrand" src="/images/logo.png"></img></a>
-        <form class="navbar-form navbar-left" role="search" id="Search_Bar">
-    <input type="text" class="form-control" placeholder="Search">
-  <button type="submit" class="btn btn-small">Submit</button>
-</form>
    <a id="logout" href="/logout.php">Logout</a>
 
   <a id="msg" href="#"> <button class="btn btn-warning" type="button">
@@ -48,7 +44,7 @@ Friends<span class="glyphicon glyphicon-user">24</span>
  <div id="sidebar">
    <ul>
      <li>
-      <a href="#"> <span class="glyphicon glyphicon-home"> Home</span></a>
+      <a href="../welcome.php"> <span class="glyphicon glyphicon-home"> Home</span></a>
      </li>
      <li>
     <a href="../friends.php"><span class="glyphicon glyphicon-user"> Friends</span></a>
