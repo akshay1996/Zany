@@ -22,18 +22,7 @@ include('includes/mysql_connection.php');
   <header>
     <div id="navbar">
    <a id="userwel" href=#user><img id="#dp"><?php echo "Hello, ".$_SESSION['login_user']; ?></a>
-      <a id="logo" href="welcome.php"><img alt="Brand" id="logobrand" src="/images/logo.png"></img></a>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-      <!--<form class="navbar-form navbar-left" role="search" id="Search_Bar">
-  <input type="text" class="form-control" placeholder="Search">
-<button type="submit" class="btn btn-small">Submit</button>
-</form>-->
->>>>>>> master
->>>>>>> refs/remotes/origin/master
-   <a id="logout" href="/logout.php">Logout</a>
+      <a id="logo" href="welcome.php"><img alt="Brand" id="logobrand" src="/images/logo.png"></img></a>  <a id="logout" href="/logout.php">Logout</a>
 
   <a id="msg" href="#"> <button class="btn btn-warning" type="button">
 Notifications <span class="badge">14</span>
