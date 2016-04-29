@@ -4,6 +4,7 @@ include('includes/mysql_connection.php');
          error_reporting(E_ALL|E_STRICT);
          ini_set('display_errors',true);
           $msg = '';
+          $msg1= '';
           if(isset($_POST['action'])){
           if($_POST['action']=="login"){
                $user=secure_input($_POST['username']);
@@ -19,6 +20,11 @@ include('includes/mysql_connection.php');
                    header("Location: welcome.php");
                    exit();
                  }
+                 else{
+                  $msg = '<div class="alert alert-danger">
+         <strong>Error!</strong> Wrong username or Password.
+       </div>';
+     }
               }
               else{
                $msg = '<div class="alert alert-danger">
@@ -45,12 +51,12 @@ include('includes/mysql_connection.php');
            $stmt->execute();
            $stmt->close();
            $conn->close();
-           $msg='<div class="alert alert-success">
+           $msg1='<div class="alert alert-success">
   <strong>Success</strong> Succesfully Registered!</div>';
 
          }
          else{
-           $msg='<div class="alert alert-danger">
+           $msg1='<div class="alert alert-danger">
   <strong>Error!</strong> Please enter all fields!
 </div>';
                   }
@@ -91,13 +97,14 @@ ob_flush(); ?>
   <p>Please Login or Register</p>
   <p><button type="button" class="btn btn-danger" data-toggle="modal" data-target=".bs-example-modal-lg">Login</button>
 <button type="button" class="btn btn-danger" data-toggle="modal" data-target=".bs-example-modal-lg1">Register</button>
+<?php echo $msg; ?>
+<?php echo $msg1; ?>
 <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
 
   <div class="container">
   <h2>Login to ZanY</h2>
-  <p>The test form</p>
   <form role="form" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method="post">
     <div class="form-group">
       <label for="usr">Username:</label>
@@ -167,8 +174,8 @@ ob_flush(); ?>
                <input name="action" type="hidden" value="register" >
               <input type="submit" name="registration-btn" value="Register" class="btn btn-default">
             </div>
-               <?php echo $msg; ?>
           </div>
+          <?php echo $msg1; ?>
         </form>
       </div>
 </form>

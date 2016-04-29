@@ -1,15 +1,7 @@
 <?php
 include('includes/session.php');
 include('includes/mysql_connection.php');
-$msg="";
-$post_update="";
-if(isset($_POST['action'])){
-if($_POST['action']=="status"){
-$msg=$_POST['status'];
-$post_update="<span class='whoposted'>".$_SESSION['login_user']." posted an update <span class='glyphicon glyphicon-bullhorn'></span> </span><br><h3>".$msg."</h3>";
 
-}
-}
 ?>
 <!DOCTYPE html>
 <html>
@@ -23,6 +15,7 @@ $post_update="<span class='whoposted'>".$_SESSION['login_user']." posted an upda
 
 <!-- Latest compiled JavaScript -->
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="../js/active.js"></script>
   <link rel="stylesheet" href="css/welcome_style.css" type="text/css">
 </head>
 <body>
@@ -30,10 +23,13 @@ $post_update="<span class='whoposted'>".$_SESSION['login_user']." posted an upda
     <div id="navbar">
    <a id="userwel" href=#user><img id="#dp"><?php echo "Hello, ".$_SESSION['login_user']; ?></a>
       <a id="logo" href="welcome.php"><img alt="Brand" id="logobrand" src="/images/logo.png"></img></a>
-        <form class="navbar-form navbar-left" role="search" id="Search_Bar">
-    <input type="text" class="form-control" placeholder="Search">
-  <button type="submit" class="btn btn-small">Submit</button>
-</form>
+<<<<<<< HEAD
+=======
+      <!--<form class="navbar-form navbar-left" role="search" id="Search_Bar">
+  <input type="text" class="form-control" placeholder="Search">
+<button type="submit" class="btn btn-small">Submit</button>
+</form>-->
+>>>>>>> master
    <a id="logout" href="/logout.php">Logout</a>
 
   <a id="msg" href="#"> <button class="btn btn-warning" type="button">
@@ -53,6 +49,24 @@ Friends<span class="glyphicon glyphicon-user">24</span>
    This area is for Uploading profile pic and time line.
  </div>
  <div id="sidebar">
+   <ul>
+     <li>
+      <a href="../welcome.php"> <span class="glyphicon glyphicon-home"> Home</span></a>
+     </li>
+     <li>
+    <a href="../friends.php"><span class="glyphicon glyphicon-user"> Friends</span></a>
+     </li>
+     <li>
+      <a href="#"> <span class="glyphicon glyphicon-envelope"> Messages</span></a>
+     </li>
+     <li>
+      <a href="../search.php"> <span class="glyphicon glyphicon-home"> Find Friends</span></a>
+     </li>
+     <li>
+      <a href="#"><span class="glyphicon glyphicon-credit-card"> ResetPassword</span></a>
+     </li>
+   </ul>
+
  </div>
 
 </body>
